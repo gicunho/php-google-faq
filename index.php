@@ -37,3 +37,61 @@ $faqs = [
 ?>
 
 
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google FAQs</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+      <!-- Site Header -->
+      <div id="site_header">
+        <div class="top">
+            <div class="logo">
+            <img src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg" alt=""> <a class="link" href="#">Privacy e Termini</a>
+            </div>
+            <div class="right_menu">
+            <i class="fas fa-th fa-lg fa-fw"></i>
+            <img src="https://media.famigliacristiana.it/2013/3/rizzoli_articolo_flash_con_video_2821631_307422.jpg" alt="">
+            </div>
+        </div>
+
+        <!-- Navbar -->
+        <nav class="main_menu">
+          <a href="#">Introduzione</a>
+          <a href="#">Norme</a>
+          <a href="#">Termini di servizio</a>
+          <a href="#">Tecnologie</a>
+          <a href="#">Domande Frequenti</a>
+        </nav>
+        <!-- Navbar -->
+
+      </div>
+      <!-- /#site_header -->
+      
+
+      <!-- Site Main Content -->
+      <div class="faqs">
+        <?php
+        foreach ($faqs as $faq) {
+        ?>
+          <div class="faq">
+            <h2 class="question"><?php echo $faq['question']; ?></h2>
+            <div class="answer">
+              <?php echo $faq['answer']; ?>
+            </div>
+          </div>
+
+        <?php
+        }
+        ?>
+      </div>
+      <!-- Site Main Content -->
+
+    </body>
+</html>
